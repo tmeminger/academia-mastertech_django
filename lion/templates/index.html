@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <h2>Projeto Cut My Lip</h2>
+    <h2>"Lean on my pride, I'm a Lion". Essa é a aplicação Lion do projeto.</h2>
+    <p>Esse é o perfil de {{nome}}</p>
+    {% if nome == "Camila" %}
+        <p>sim, essa é a página da Camila</p>
+    {% endif %}
+    
+    <h1>Esses são nossos thunderCATS</h1>
+    <ul>
+    {% for cats in gatos %}
+        <li>{{cats}}</li>
+    {% endfor %}
+    <ul>
+</body>
+</html>
